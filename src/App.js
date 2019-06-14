@@ -8,8 +8,8 @@ class App extends Component {
     todo: [
       { id: 0, value: "Protokoll", done: true },
       { id: 1, value: "Click Me", done: false },
-      { id: 3, value: "Click x to delete", done: false },
-      { id: 4, value: "Add Todo", done: false }
+      { id: 2, value: "Click x to delete", done: false },
+      { id: 3, value: "Add Todo (enter Text and press Enter)", done: false }
     ],
     value: ""
   };
