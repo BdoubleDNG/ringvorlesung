@@ -8,8 +8,8 @@ class App extends Component {
     todo: [
       { id: 0, value: "Protokoll", done: true },
       { id: 1, value: "Click Me", done: false },
-      { id: 1, value: "Click x to delete", done: false },
-      { id: 2, value: "Add Todo", done: false }
+      { id: 3, value: "Click x to delete", done: false },
+      { id: 4, value: "Add Todo", done: false }
     ],
     value: ""
   };
@@ -50,11 +50,11 @@ class App extends Component {
   }
   onDelete = e => {
     e.stopPropagation();
-    let id = e.target.id;
+    let id = parseInt(e.target.id);
     console.log(id);
 
     let elements = this.state.todo;
-    this.setState({ todo: elements.filter(el => el.id != id) });
+    this.setState({ todo: elements.filter(el => el.id !== id) });
   };
   handleOnClick = id => {
     console.log("click");
