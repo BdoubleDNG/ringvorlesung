@@ -52,8 +52,12 @@ class App extends Component {
     e.stopPropagation();
     let id = parseInt(e.target.id);
 
-    let elements = this.state.todo;
-    this.setState({ todo: elements.filter(el => el.id !== id) });
+    let elements = this.state.todo.filter(el => el.id !== id);
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].id = i;
+    }
+
+    this.setState({ todo: elements });
   };
   handleOnClick = id => {
     let elements = this.state.todo;
