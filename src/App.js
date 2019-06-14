@@ -51,14 +51,11 @@ class App extends Component {
   onDelete = e => {
     e.stopPropagation();
     let id = parseInt(e.target.id);
-    console.log(id);
 
     let elements = this.state.todo;
     this.setState({ todo: elements.filter(el => el.id !== id) });
   };
   handleOnClick = id => {
-    console.log("click");
-
     let elements = this.state.todo;
     let index = elements.findIndex(el => el.id === id);
     elements[index].done = !elements[index].done;
